@@ -1,0 +1,103 @@
+﻿using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ApiTestExtension2.DataStructure.Json
+{
+    public class JsonEntry
+    {
+        public JsonEntryType type = JsonEntryType.DEFAULT;
+        public List<JsonEntry> entryList = new List<JsonEntry>();
+        public Dictionary<String, JsonEntry> entryDict = new Dictionary<string, JsonEntry>();
+        public int intValue;
+        public String stringValue;
+
+        public static JsonEntry analyzeFromJsonToken(JToken jt)
+        {
+            JsonEntry result = new JsonEntry();
+
+            try
+            {
+                switch (jt.Type)
+                {
+                    case JTokenType.Array:
+                        if ((jt as JArray).Count > 0)
+                        {
+                            result.type = JsonEntryType.LIST_ENTRY;
+                            foreach (JToken jtItem in (jt as JArray))
+                            {
+                                result.entryList.Add(analyzeFromJsonToken(jtItem));
+                            }
+                        }
+                        else
+                        {
+                            result.type = JsonEntryType.LIST_NULL;
+                        }
+                        break;
+                    case JTokenType.Object:
+                        if ((jt as JObject).HasValues)
+                        {
+                            result.type = JsonEntryType.DICT;
+                            foreach (JProperty jpItem in (jt as JObject).Children())
+                            {
+                                String key = jpItem.Name;
+                                JToken jtValue = jpItem.Value;
+                                result.entryDict.Add(key, analyzeFromJsonToken(jtValue));
+                            }
+                        }
+                        else
+                        {
+                            result.type = JsonEntryType.DICT_NULL;
+                        }
+                        break;
+                    case JTokenType.Null:
+                        result.type = JsonEntryType.NULL;
+                        break;
+                    case JTokenType.Integer:
+                        result.type = JsonEntryType.INT;
+                        result.intValue = (int)(jt as JValue).Value;
+                        break;
+                    default:
+                        result.type = JsonEntryType.STRING;
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            return result;
+        }
+    }
+
+    public class JsonEntryItem
+    {
+        private String key;
+        private JsonEntry value;
+
+        public static JsonEntryItem analyze(JToken item)
+        {
+            JsonEntryItem result = new JsonEntryItem();
+
+
+
+            return result;
+        }
+    }
+
+    public enum JsonEntryType
+    {
+        DEFAULT,
+        LIST_ENTRY,
+        LIST_NULL,
+        DICT_NULL,
+        DICT,
+        STRING,
+        INT,
+        NULL
+    }
+}

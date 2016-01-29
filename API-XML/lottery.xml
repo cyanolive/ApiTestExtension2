@@ -1,0 +1,3054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by pgao (bainainfo) -->
+<!DOCTYPE root SYSTEM "template.dtd">
+<root product="Lottery">
+	<api>
+		<name>ok</name>
+		<apiulr>/duobao/api/v1/sso_login/ok</apiulr>
+		<function>OK登录</function>
+		<menuFolder>账号</menuFolder>
+		<menuText>OK登录</menuText>
+		<request type="POST">
+			<param type="string" compulsory="true">
+				<paraname>thirdpartyId</paraname>
+				<paraInstruction>第三方登录id</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>accessToken</paraname>
+				<paraInstruction>第三方token</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="string">
+				<name>reason</name>
+				<remark>登录失败的原因</remark>
+			</item>
+			<item type="dict">
+				<name>status</name>
+				<remark>用户登录的状态1-成功，0-失败</remark>
+			</item>
+			<item type="dict">
+				<name>account</name>
+				<remark>返回的结果dict</remark>
+				<item type="string">
+					<name>token</name>
+					<remark>返回的服务端token</remark>
+				</item>
+				<item type="dict">
+					<name>user</name>
+					<remark>宝贝获奖者的信息dict</remark>
+					<item type="int">
+						<name>uid</name>
+						<remark>用户id（用户唯一标识）</remark>
+					</item>
+					<item type="string">
+						<name>nickname</name>
+						<remark>用户昵称</remark>
+					</item>
+					<item type="string">
+						<name>mobile</name>
+						<remark>用户电话号码</remark>
+					</item>
+					<item type="string">
+						<name>imgUrl</name>
+						<remark>用户头像url</remark>
+					</item>
+					<item type="int">
+						<name>balance</name>
+						<remark>用户账户的剩余coin</remark>
+					</item>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>fb</name>
+		<apiulr>/duobao/api/v1/sso_login/fb</apiulr>
+		<function>facebook登录</function>
+		<menuFolder>账号</menuFolder>
+		<menuText>facebook登录</menuText>
+		<request type="POST">
+			<param type="string" compulsory="true">
+				<paraname>thirdpartyId</paraname>
+				<paraInstruction>第三方登录id</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>accessToken</paraname>
+				<paraInstruction>第三方token</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="string">
+				<name>reason</name>
+				<remark>登录失败的原因</remark>
+			</item>
+			<item type="dict">
+				<name>status</name>
+				<remark>用户登录的状态1-成功，0-失败</remark>
+			</item>
+			<item type="dict">
+				<name>account</name>
+				<remark>返回的结果dict</remark>
+				<item type="string">
+					<name>token</name>
+					<remark>返回的服务端token</remark>
+				</item>
+				<item type="dict">
+					<name>user</name>
+					<remark>宝贝获奖者的信息dict</remark>
+					<item type="int">
+						<name>uid</name>
+						<remark>用户id（用户唯一标识）</remark>
+					</item>
+					<item type="string">
+						<name>nickname</name>
+						<remark>用户昵称</remark>
+					</item>
+					<item type="string">
+						<name>mobile</name>
+						<remark>用户电话号码</remark>
+					</item>
+					<item type="string">
+						<name>imgUrl</name>
+						<remark>用户头像url</remark>
+					</item>
+					<item type="int">
+						<name>balance</name>
+						<remark>用户账户的剩余coin</remark>
+					</item>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>vk</name>
+		<apiulr>/duobao/api/v1/sso_login/vk</apiulr>
+		<function>vk登录</function>
+		<menuFolder>账号</menuFolder>
+		<menuText>vk登录</menuText>
+		<request type="POST">
+			<param type="string" compulsory="true">
+				<paraname>thirdpartyId</paraname>
+				<paraInstruction>第三方登录id</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>accessToken</paraname>
+				<paraInstruction>第三方token</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="string">
+				<name>reason</name>
+				<remark>登录失败的原因</remark>
+			</item>
+			<item type="dict">
+				<name>status</name>
+				<remark>用户登录的状态1-成功，0-失败</remark>
+			</item>
+			<item type="dict">
+				<name>account</name>
+				<remark>返回的结果dict</remark>
+				<item type="string">
+					<name>token</name>
+					<remark>返回的服务端token</remark>
+				</item>
+				<item type="dict">
+					<name>user</name>
+					<remark>宝贝获奖者的信息dict</remark>
+					<item type="int">
+						<name>uid</name>
+						<remark>用户id（用户唯一标识）</remark>
+					</item>
+					<item type="string">
+						<name>nickname</name>
+						<remark>用户昵称</remark>
+					</item>
+					<item type="string">
+						<name>mobile</name>
+						<remark>用户电话号码</remark>
+					</item>
+					<item type="string">
+						<name>imgUrl</name>
+						<remark>用户头像url</remark>
+					</item>
+					<item type="int">
+						<name>balance</name>
+						<remark>用户账户的剩余coin</remark>
+					</item>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>wx</name>
+		<apiulr>/duobao/api/v1/sso_login/wx</apiulr>
+		<function>微信登录</function>
+		<menuFolder>账号</menuFolder>
+		<menuText>微信登录</menuText>
+		<request type="POST">
+			<param type="string" compulsory="true">
+				<paraname>thirdpartyId</paraname>
+				<paraInstruction>第三方登录id</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>accessToken</paraname>
+				<paraInstruction>第三方token</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="string">
+				<name>reason</name>
+				<remark>登录失败的原因</remark>
+			</item>
+			<item type="dict">
+				<name>status</name>
+				<remark>用户登录的状态1-成功，0-失败</remark>
+			</item>
+			<item type="dict">
+				<name>account</name>
+				<remark>返回的结果dict</remark>
+				<item type="string">
+					<name>token</name>
+					<remark>返回的服务端token</remark>
+				</item>
+				<item type="dict">
+					<name>user</name>
+					<remark>宝贝获奖者的信息dict</remark>
+					<item type="int">
+						<name>uid</name>
+						<remark>用户id（用户唯一标识）</remark>
+					</item>
+					<item type="string">
+						<name>nickname</name>
+						<remark>用户昵称</remark>
+					</item>
+					<item type="string">
+						<name>mobile</name>
+						<remark>用户电话号码</remark>
+					</item>
+					<item type="string">
+						<name>imgUrl</name>
+						<remark>用户头像url</remark>
+					</item>
+					<item type="int">
+						<name>balance</name>
+						<remark>用户账户的剩余coin</remark>
+					</item>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>logout</name>
+		<apiulr>/duobao/api/v1/user/logout</apiulr>
+		<function>用户退出登录</function>
+		<menuFolder>账号</menuFolder>
+		<menuText>用户退出登录</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>token</paraname>
+				<paraInstruction>用户令牌</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict"/>
+	</api>
+	<api>
+		<name>register</name>
+		<apiulr>/duobao/api/v1/user/register</apiulr>
+		<function>用户注册</function>
+		<menuFolder>账号</menuFolder>
+		<menuText>用户注册</menuText>
+		<request type="POST">
+			<param type="string" compulsory="true">
+				<paraname>mobile</paraname>
+				<paraInstruction>注册手机号</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>password</paraname>
+				<paraInstruction>注册密码加密密文</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>timestamp</paraname>
+				<paraInstruction>请求时间戳</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>sign</paraname>
+				<paraInstruction>注册请求签名</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict"/>
+	</api>
+	<api>
+		<name>checkMobileExists</name>
+		<apiulr>/duobao/api/v1/user/mobileExists</apiulr>
+		<function>检测手机用户是否已存在</function>
+		<menuFolder>账号</menuFolder>
+		<menuText>手机用户检测</menuText>
+		<request type="GET">
+			<param type="string" compulsory="true">
+				<paraname>mobile</paraname>
+				<paraInstruction>注册手机号</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>status</name>
+				<remark>注册预备状态码， 0-用户不存在， 1-用户已存在</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>login</name>
+		<apiulr>/duobao/api/v1/user/login</apiulr>
+		<function>用户登录</function>
+		<menuFolder>账号</menuFolder>
+		<menuText>用户登录</menuText>
+		<request type="POST">
+			<param type="string" compulsory="true">
+				<paraname>mobile</paraname>
+				<paraInstruction>注册手机号</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>password</paraname>
+				<paraInstruction>注册密码加密密文</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>timestamp</paraname>
+				<paraInstruction>请求时间戳</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>sign</paraname>
+				<paraInstruction>注册请求签名</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="string">
+				<name>reason</name>
+				<remark>登录失败的原因</remark>
+			</item>
+			<item type="int">
+				<name>status</name>
+				<remark>用户登录的状态1-成功，0-失败</remark>
+			</item>
+			<item type="dict">
+				<name>account</name>
+				<remark>用户账户信息</remark>
+				<item type="string">
+					<name>token</name>
+					<remark>返回的服务端token</remark>
+				</item>
+				<item type="dict">
+					<name>user</name>
+					<remark>宝贝获奖者的信息dict</remark>
+					<item type="int">
+						<name>uid</name>
+						<remark>用户id</remark>
+					</item>
+					<item type="string">
+						<name>nickname</name>
+						<remark>用户昵称</remark>
+					</item>
+					<item type="string">
+						<name>mobile</name>
+						<remark>用户电话号码</remark>
+					</item>
+					<item type="string">
+						<name>imgUrl</name>
+						<remark>用户头像url</remark>
+					</item>
+					<item type="int">
+						<name>balance</name>
+						<remark>用户账户的剩余coin</remark>
+					</item>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>list</name>
+		<apiulr>/duobao/api/v1/goods/list</apiulr>
+		<function>获取分类宝贝列表</function>
+		<scene>获取首页及各分类页面宝贝列表</scene>
+		<menuFolder>商品相关</menuFolder>
+		<menuText>首页商品列表</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>categoryId</paraname>
+				<paraInstruction>商品类别id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>sortId</paraname>
+				<paraInstruction>排序规则</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageNum</paraname>
+				<paraInstruction>请求第几页</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageSize</paraname>
+				<paraInstruction>每一页的大小（包含多少个宝贝）</paraInstruction>
+			</param>
+		</request>
+		<response type="json_list">
+			<item type="int">
+				<name>period</name>
+				<remark>宝贝的期数（第几期）</remark>
+			</item>
+			<item type="int">
+				<name>startTime</name>
+				<remark>宝贝的开始时间</remark>
+			</item>
+			<item type="int">
+				<name>status</name>
+				<remark>宝贝所处的状态，这里只可能为‘夺宝中’</remark>
+			</item>
+			<item type="int">
+				<name>existingBuyNum</name>
+				<remark>宝贝已经被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>needBuyNum</name>
+				<remark>宝贝总共需要被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>buyUnit</name>
+				<remark>购买宝贝需要的最小份数（购买份数需是此数值的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>defaultBuyUnit</name>
+				<remark>入购物车时的默认购买份数（这个数值也必须是buyUnit的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>privilege</name>
+				<remark>商品默认排序优先级</remark>
+			</item>
+			<item type="dict">
+				<name>goods</name>
+				<remark>宝贝商品的详细信息dict</remark>
+				<item type="int">
+					<name>gid</name>
+					<remark>商品id</remark>
+				</item>
+				<item type="list">
+					<name>thumbnails</name>
+					<remark>商品的小图list，里面存放了图片的url</remark>
+				</item>
+				<item type="list">
+					<name>displayImgs</name>
+					<remark>商品展示大图，里面存放了展示图片的url</remark>
+				</item>
+				<item type="string">
+					<name>name</name>
+					<remark>商品名称</remark>
+				</item>
+				<item type="string">
+					<name>title</name>
+					<remark>商品标题</remark>
+				</item>
+				<item type="string">
+					<name>subTitle</name>
+					<remark>商品副标题</remark>
+				</item>
+				<item type="int">
+					<name>categoryId</name>
+					<remark>商品种类id</remark>
+				</item>
+				<item type="string">
+					<name>desc</name>
+					<remark>商品描述</remark>
+				</item>
+				<item type="int">
+					<name>totalPeriod</name>
+					<remark>商品总共上架了多少期</remark>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>category</name>
+		<apiulr>/duobao/api/v1/goods/category</apiulr>
+		<function>获取支持的商品类别</function>
+		<menuFolder>商品相关</menuFolder>
+		<menuText>商品类别</menuText>
+		<request type="GET">
+		</request>
+		<response type="json_list">
+			<item type="string">
+				<name>iconUrl</name>
+				<remark>商品的类别图标url</remark>
+			</item>
+			<item type="int">
+				<name>categoryId</name>
+				<remark>商品的类别id</remark>
+			</item>
+			<item type="string">
+				<name>categoryName</name>
+				<remark>商品类别名称</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>banner</name>
+		<apiulr>/duobao/api/v1/index/banner</apiulr>
+		<function>app启动初获取一些展示信息抓取眼球</function>
+		<menuFolder>细展示项</menuFolder>
+		<menuText>Banner</menuText>
+		<request type="GET">
+		</request>
+		<response type="json_list">
+			<item type="string">
+				<name>title</name>
+				<remark>banner标题</remark>
+			</item>
+			<item type="string">
+				<name>imgUrl</name>
+				<remark>banner的图片url</remark>
+			</item>
+			<item type="string">
+				<name>clickUrl</name>
+				<remark>banner的点击url-这里可能是：1、html页面url 2、商品id 3、搜索的跳转路径指示规则， 具体待定</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>notice</name>
+		<apiulr>/duobao/api/v1/index/notice</apiulr>
+		<function>获取系统维护升级公告等</function>
+		<menuFolder>细展示项</menuFolder>
+		<menuText>系统通知</menuText>
+		<request type="GET"/>
+		<response type="json_list">
+			<item type="int">
+				<name>id</name>
+				<remark>公告id</remark>
+			</item>
+			<item type="string">
+				<name>bgColor</name>
+				<remark>背景颜色</remark>
+			</item>
+			<item type="string">
+				<name>clickUrl</name>
+				<remark>公告点击进入的url</remark>
+			</item>
+			<item type="string">
+				<name>imgUrl</name>
+				<remark>公告的图片url</remark>
+			</item>
+			<item type="string">
+				<name>text</name>
+				<remark>公告的正文</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>launchAds</name>
+		<apiulr>/duobao/api/v1/index/launchAds</apiulr>
+		<function>app开机启动时的唯美展示广告页等</function>
+		<menuFolder>细展示项</menuFolder>
+		<menuText>开屏广告</menuText>
+		<request type="GET"/>
+		<response type="json_list">
+			<item type="string">
+				<name>bgColor</name>
+				<remark>背景颜色</remark>
+			</item>
+			<item type="string">
+				<name>imgUrl</name>
+				<remark>图片url</remark>
+			</item>
+			<item type="string">
+				<name>title</name>
+				<remark>标题</remark>
+			</item>
+			<item type="string">
+				<name>appvc</name>
+				<remark>app版本号</remark>
+			</item>
+			<item type="string">
+				<name>clickUrl</name>
+				<remark>点击进入url</remark>
+			</item>
+			<item type="string">
+				<name>appType</name>
+				<remark>app类型</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>lottery</name>
+		<apiulr>/duobao/api/v1/index/lottery</apiulr>
+		<function>获取小喇叭公告-哪些用户最近获奖鸟</function>
+		<menuFolder>细展示项</menuFolder>
+		<menuText>小喇叭通知</menuText>
+		<request type="GET"/>
+		<response type="json_list">
+			<item type="string">
+				<name>text</name>
+				<remark>notice正文， 包含有html标签等</remark>
+			</item>
+			<item type="int">
+				<name>lotteryTime</name>
+				<remark>获奖时间， 精确到毫秒</remark>
+			</item>
+			<item type="string">
+				<name>clickUrl</name>
+				<remark>点击url：跳转规则url</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>navigator</name>
+		<apiulr>/duobao/api/v1/index/navigator</apiulr>
+		<function>获取分类、晒单、常见问题等navigator</function>
+		<menuFolder>细展示项</menuFolder>
+		<menuText>导航</menuText>
+		<request type="GET"/>
+		<response type="json_list">
+			<item type="string">
+				<name>imgUrl</name>
+				<remark>导航项图片</remark>
+			</item>
+			<item type="string">
+				<name>text</name>
+				<remark>导航项文字说明</remark>
+			</item>
+			<item type="string">
+				<name>clickUrl</name>
+				<remark>点击url：跳转规则url</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>inform</name>
+		<apiulr>/duobao/api/v1/index/inform</apiulr>
+		<function>获取通知界面信息</function>
+		<menuFolder>细展示项</menuFolder>
+		<menuText>获取通知界面信息</menuText>
+		<request type="GET"/>
+		<response type="json_list">
+			<item type="string">
+				<name>title</name>
+				<remark>标题</remark>
+			</item>
+			<item type="int">
+				<name>time</name>
+				<remark>时间戳， 精确到毫秒</remark>
+			</item>
+			<item type="string">
+				<name>description</name>
+				<remark>描述</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>help</name>
+		<apiulr>/duobao/api/v1/index/help</apiulr>
+		<function>获取帮助界面信息</function>
+		<menuFolder>细展示项</menuFolder>
+		<menuText>获取帮助界面信息</menuText>
+		<request type="GET"/>
+		<response type="json_list">
+			<item type="string">
+				<name>question</name>
+				<remark>问题</remark>
+			</item>
+			<item type="string">
+				<name>answer</name>
+				<remark>回答</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>revealList</name>
+		<apiulr>/duobao/api/v1/goods/revealList</apiulr>
+		<function>获取最新揭晓宝贝信息</function>
+		<scene>获取最新的包括已经中奖揭晓以及等待揭晓的宝贝信息</scene>
+		<menuFolder>商品相关</menuFolder>
+		<menuText>最新揭晓商品列表</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>pageNum</paraname>
+				<paraInstruction>请求第几页</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageSize</paraname>
+				<paraInstruction>每一页的大小（包含多少个宝贝）</paraInstruction>
+			</param>
+		</request>
+		<response type="json_list">
+			<item type="int">
+				<name>period</name>
+				<remark>宝贝的期数（第几期）</remark>
+			</item>
+			<item type="int">
+				<name>startTime</name>
+				<remark>宝贝的开始时间</remark>
+			</item>
+			<item type="int">
+				<name>status</name>
+				<remark>宝贝所处的状态，这里只可能为‘夺宝中’</remark>
+			</item>
+			<item type="int">
+				<name>existingBuyNum</name>
+				<remark>宝贝已经被购买的份数， 这里肯定等于下面的needBuyNum</remark>
+			</item>
+			<item type="int">
+				<name>needBuyNum</name>
+				<remark>宝贝总共需要被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>buyUnit</name>
+				<remark>购买宝贝需要的最小份数（购买份数需是此数值的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>privilege</name>
+				<remark>商品默认排序优先级</remark>
+			</item>
+			<item type="int">
+				<name>defaultBuyUnit</name>
+				<remark>入购物车时的默认购买份数（这个数值也必须是buyUnit的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>lotteryTime</name>
+				<remark>宝贝开奖时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>remainTime</name>
+				<remark>宝贝开奖剩余时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>luckyCode</name>
+				<remark>幸运号码</remark>
+			</item>
+			<item type="dict">
+				<name>goods</name>
+				<remark>宝贝商品的详细信息dict</remark>
+				<item type="int">
+					<name>id</name>
+					<remark>商品id</remark>
+				</item>
+				<item type="list">
+					<name>thumbnails</name>
+					<remark>商品的小图list，里面存放了图片的url</remark>
+				</item>
+				<item type="list">
+					<name>displayImgs</name>
+					<remark>商品展示大图，里面存放了展示图片的url</remark>
+				</item>
+				<item type="string">
+					<name>name</name>
+					<remark>商品名称</remark>
+				</item>
+				<item type="string">
+					<name>title</name>
+					<remark>商品标题</remark>
+				</item>
+				<item type="string">
+					<name>subTitle</name>
+					<remark>商品副标题</remark>
+				</item>
+				<item type="int">
+					<name>categoryId</name>
+					<remark>商品种类id</remark>
+				</item>
+				<item type="string">
+					<name>desc</name>
+					<remark>商品描述</remark>
+				</item>
+				<item type="int">
+					<name>totalPeriod</name>
+					<remark>商品总共上架了多少期</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winner</name>
+				<remark>宝贝获奖者的信息dict</remark>
+				<item type="int">
+					<name>uid</name>
+					<remark>宝贝获奖者的用户id（用户唯一标识）</remark>
+				</item>
+				<item type="string">
+					<name>nickname</name>
+					<remark>获奖者昵称</remark>
+				</item>
+				<item type="string">
+					<name>mobile</name>
+					<remark>获奖者电话号码</remark>
+				</item>
+				<item type="string">
+					<name>imgUrl</name>
+					<remark>获奖者头像url</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winnerJoin</name>
+				<remark>获奖者参与本期信息</remark>
+				<item type="int">
+					<name>totalCnt</name>
+					<remark>获奖者总共参与本期的份数</remark>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>detail</name>
+		<apiulr>/duobao/api/v1/goods/detail</apiulr>
+		<function>获取宝贝详情页</function>
+		<menuFolder>商品相关</menuFolder>
+		<menuText>商品详情</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>period</paraname>
+				<paraInstruction>期数， 若为0或者不传， 则表示请求此商品最新一期的上架宝贝详情页</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>gid</paraname>
+				<paraInstruction>商品id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>period</name>
+				<remark>宝贝的期数（第几期）</remark>
+			</item>
+			<item type="int">
+				<name>startTime</name>
+				<remark>宝贝的开始时间</remark>
+			</item>
+			<item type="int">
+				<name>status</name>
+				<remark>宝贝所处的状态</remark>
+			</item>
+			<item type="int">
+				<name>existingBuyNum</name>
+				<remark>宝贝已经被购买的份数， 这里肯定等于下面的needBuyNum</remark>
+			</item>
+			<item type="int">
+				<name>needBuyNum</name>
+				<remark>宝贝总共需要被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>buyUnit</name>
+				<remark>购买宝贝需要的最小份数（购买份数需是此数值的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>defaultBuyUnit</name>
+				<remark>入购物车时的默认购买份数（这个数值也必须是buyUnit的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>privilege</name>
+				<remark>商品默认排序优先级</remark>
+			</item>
+			<item type="int">
+				<name>lotteryTime</name>
+				<remark>宝贝开奖时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>remainTime</name>
+				<remark>宝贝开奖剩余时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>luckyCode</name>
+				<remark>幸运号码</remark>
+			</item>
+			<item type="dict">
+				<name>goods</name>
+				<remark>宝贝商品的详细信息dict</remark>
+				<item type="int">
+					<name>id</name>
+					<remark>商品id</remark>
+				</item>
+				<item type="list">
+					<name>thumbnails</name>
+					<remark>商品的小图list，里面存放了图片的url</remark>
+				</item>
+				<item type="list">
+					<name>displayImgs</name>
+					<remark>商品展示大图，里面存放了展示图片的url</remark>
+				</item>
+				<item type="string">
+					<name>name</name>
+					<remark>商品名称</remark>
+				</item>
+				<item type="string">
+					<name>title</name>
+					<remark>商品标题</remark>
+				</item>
+				<item type="string">
+					<name>subTitle</name>
+					<remark>商品副标题</remark>
+				</item>
+				<item type="int">
+					<name>categoryId</name>
+					<remark>商品种类id</remark>
+				</item>
+				<item type="string">
+					<name>desc</name>
+					<remark>商品描述</remark>
+				</item>
+				<item type="int">
+					<name>totalPeriod</name>
+					<remark>商品总共上架了多少期</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winner</name>
+				<remark>宝贝获奖者的信息dict</remark>
+				<item type="int">
+					<name>uid</name>
+					<remark>宝贝获奖者的用户id（用户唯一标识）</remark>
+				</item>
+				<item type="string">
+					<name>nickname</name>
+					<remark>获奖者昵称</remark>
+				</item>
+				<item type="string">
+					<name>mobile</name>
+					<remark>获奖者电话号码</remark>
+				</item>
+				<item type="string">
+					<name>imgUrl</name>
+					<remark>获奖者头像url</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winnerJoin</name>
+				<remark>获奖者参与本期信息</remark>
+				<item type="int">
+					<name>totalCnt</name>
+					<remark>获奖者总共参与本期的份数</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>userJoin</name>
+				<remark>用户参与本期信息</remark>
+				<item type="int">
+					<name>totalCnt</name>
+					<remark>获奖者总共参与本期的份数</remark>
+				</item>
+				<item type="list">
+					<name>buyInfos</name>
+					<remark>用户购买记录列表(某一期用户可能会多次购买，故而用列表)</remark>
+					<item type="int">
+						<name>buyNum</name>
+						<remark>购买的份数</remark>
+					</item>
+					<item type="int">
+						<name>buyTime</name>
+						<remark>购买的时间戳， 精确到毫秒</remark>
+					</item>
+					<item type="list">
+						<name>buyCodes</name>
+						<remark>购买的抽奖号码list， list元素为int</remark>
+					</item>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>Record</name>
+		<apiulr>/duobao/api/v1/goods/Record</apiulr>
+		<function>获取夺宝记录</function>
+		<menuFolder>商品相关</menuFolder>
+		<menuText>参与记录</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>pageNum</paraname>
+				<paraInstruction>请求第几页</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageSize</paraname>
+				<paraInstruction>每一页的大小（包含多少个宝贝)</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>gid</paraname>
+				<paraInstruction>商品id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>period</paraname>
+				<paraInstruction>期号</paraInstruction>
+			</param>
+		</request>
+		<response type="json_list">
+			<item type="dict">
+				<name>buyInfo</name>
+				<remark>一次购买的记录dict</remark>
+				<item type="int">
+					<name>buyNum</name>
+					<remark>购买的份数</remark>
+				</item>
+				<item type="int">
+					<name>buyTime</name>
+					<remark>购买的时间戳,精确到毫秒</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>user</name>
+				<remark>购买者的信息dict</remark>
+				<item type="int">
+					<name>uid</name>
+					<remark>用户id（用户唯一标识）</remark>
+				</item>
+				<item type="string">
+					<name>nickname</name>
+					<remark>购买者昵称</remark>
+				</item>
+				<item type="string">
+					<name>mobile</name>
+					<remark>购买者电话号码</remark>
+				</item>
+				<item type="string">
+					<name>imgUrl</name>
+					<remark>购买者头像url</remark>
+				</item>
+				<item type="string">
+					<name>ip</name>
+					<remark>购买者ip</remark>
+				</item>
+				<item type="string">
+					<name>ipAddress</name>
+					<remark>购买者ip所在地</remark>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>lotteryDetail</name>
+		<apiulr>/duobao/api/v1/goods/lotteryDetail</apiulr>
+		<function>获取抽奖详情</function>
+		<menuFolder>商品相关</menuFolder>
+		<menuText>抽奖详情</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>gid</paraname>
+				<paraInstruction>商品id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>period</paraname>
+				<paraInstruction>期号</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>luckyCode</name>
+				<remark>中奖号码</remark>
+			</item>
+			<item type="int">
+				<name>numberX</name>
+				<remark>生成的抽奖号码X（目前是根据最近50个用户的订单时间生成）</remark>
+			</item>
+			<item type="list">
+				<name>list</name>
+				<remark>最新揭晓宝贝list展示数组， 里面每个元素为dict</remark>
+				<item type="dict">
+					<name>buyInfo</name>
+					<remark>一次购买的记录dict</remark>
+					<item type="int">
+						<name>buyNum</name>
+						<remark>购买的份数</remark>
+					</item>
+					<item type="int">
+						<name>buyTime</name>
+						<remark>购买的时间戳， 精确到毫秒</remark>
+					</item>
+				</item>
+				<item type="dict">
+					<name>user</name>
+					<remark>购买者的信息dict</remark>
+					<item type="int">
+						<name>uid</name>
+						<remark>用户id（用户唯一标识）</remark>
+					</item>
+					<item type="string">
+						<name>nickname</name>
+						<remark>购买者昵称</remark>
+					</item>
+					<item type="string">
+						<name>mobile</name>
+						<remark>购买者电话号码</remark>
+					</item>
+					<item type="string">
+						<name>imgUrl</name>
+						<remark>购买者头像url</remark>
+					</item>
+					<item type="string">
+						<name>ip</name>
+						<remark>购买者ip</remark>
+					</item>
+					<item type="string">
+						<name>ipAddress</name>
+						<remark>购买者ip所在地</remark>
+					</item>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>photo</name>
+		<apiulr>/duobao/api/v1/user/photo</apiulr>
+		<function>更改用户照片</function>
+		<menuFolder>账号</menuFolder>
+		<menuText>更改照片</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>img</paraname>
+				<paraInstruction>新头像字节流</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>status</name>
+				<remark>更新结果 0-失败， 1-成功</remark>
+			</item>
+			<item type="string">
+				<name>reason</name>
+				<remark>如果更新失败， 则填上失败的原因</remark>
+			</item>
+			<item type="string">
+				<name>headImg</name>
+				<remark>如果更新成功， 则填上新头像的url</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>nickname</name>
+		<apiulr>/duobao/api/v1/user/nickname</apiulr>
+		<function>更改用户昵称</function>
+		<menuFolder>账号</menuFolder>
+		<menuText>更改昵称</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>nickname</paraname>
+				<paraInstruction>用户新昵称</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>status</name>
+				<remark>更新结果 0-失败， 1-成功</remark>
+			</item>
+			<item type="string">
+				<name>reason</name>
+				<remark>如果更新失败， 则填上失败的原因</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>mobile</name>
+		<apiulr>/duobao/api/v1/user/mobile</apiulr>
+		<function>更改用户手机号</function>
+		<menuFolder>账号</menuFolder>
+		<menuText>更换手机号</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>mobile</paraname>
+				<paraInstruction>注册手机号</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>status</name>
+				<remark>更新结果</remark>
+			</item>
+			<item type="string">
+				<name>reason</name>
+				<remark>如果更新失败， 则填上失败的原因</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>password</name>
+		<apiulr>/duobao/api/v1/user/password</apiulr>
+		<function>更改用户密码</function>
+		<menuFolder>账号</menuFolder>
+		<menuText>更换密码</menuText>
+		<request type="POST">
+			<param type="string" compulsory="true">
+				<paraname>mobile</paraname>
+				<paraInstruction>注册手机号</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>password</paraname>
+				<paraInstruction>注册密码加密密文</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>timestamp</paraname>
+				<paraInstruction>请求时间戳</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>sign</paraname>
+				<paraInstruction>注册请求签名</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>status</name>
+				<remark>更新结果</remark>
+			</item>
+			<item type="string">
+				<name>reason</name>
+				<remark>如果更新失败， 则填上失败的原因</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>getRecommend</name>
+		<apiulr>/duobao/api/v1/goods/getRecommend</apiulr>
+		<function>获取(推荐)标签下面的新闻</function>
+		<menuFolder>商品相关</menuFolder>
+		<menuText>推荐商品</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageNum</paraname>
+				<paraInstruction>请求第几页</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageSize</paraname>
+				<paraInstruction>每一页的大小</paraInstruction>
+			</param>
+		</request>
+		<response type="json_list">
+			<item type="int">
+				<name>period</name>
+				<remark>宝贝的期数（第几期）</remark>
+			</item>
+			<item type="int">
+				<name>startTime</name>
+				<remark>宝贝的开始时间</remark>
+			</item>
+			<item type="int">
+				<name>status</name>
+				<remark>宝贝所处的状态</remark>
+			</item>
+			<item type="int">
+				<name>existingBuyNum</name>
+				<remark>宝贝已经被购买的份数， 这里肯定等于下面的needBuyNum</remark>
+			</item>
+			<item type="int">
+				<name>needBuyNum</name>
+				<remark>宝贝总共需要被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>buyUnit</name>
+				<remark>购买宝贝需要的最小份数（购买份数需是此数值的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>defaultBuyUnit</name>
+				<remark>入购物车时的默认购买份数（这个数值也必须是buyUnit的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>privilege</name>
+				<remark>商品默认排序优先级</remark>
+			</item>
+			<item type="dict">
+				<name>goods</name>
+				<remark>宝贝商品的详细信息dict</remark>
+				<item type="int">
+					<name>id</name>
+					<remark>商品id</remark>
+				</item>
+				<item type="list">
+					<name>thumbnails</name>
+					<remark>商品的小图list，里面存放了图片的url</remark>
+				</item>
+				<item type="list">
+					<name>displayImgs</name>
+					<remark>商品展示大图,里面存放了展示图片的url</remark>
+				</item>
+				<item type="string">
+					<name>name</name>
+					<remark>商品名称</remark>
+				</item>
+				<item type="string">
+					<name>title</name>
+					<remark>商品标题</remark>
+				</item>
+				<item type="string">
+					<name>subTitle</name>
+					<remark>商品副标题</remark>
+				</item>
+				<item type="int">
+					<name>categoryId</name>
+					<remark>商品种类id</remark>
+				</item>
+				<item type="string">
+					<name>desc</name>
+					<remark>商品描述</remark>
+				</item>
+				<item type="int">
+					<name>totalPeriod</name>
+					<remark>总共开奖期数</remark>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>getPastList</name>
+		<apiulr>/duobao/api/v1/goods/getPastList</apiulr>
+		<function>获取商品往期开奖夺宝记录</function>
+		<menuFolder>商品相关</menuFolder>
+		<menuText>往期开奖</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>gid</paraname>
+				<paraInstruction>商品id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageNum</paraname>
+				<paraInstruction>请求第几页</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageSize</paraname>
+				<paraInstruction>每一页的大小（包含多少个宝贝）</paraInstruction>
+			</param>
+		</request>
+		<response type="json_list">
+			<item type="int">
+				<name>period</name>
+				<remark>宝贝的期数（第几期）</remark>
+			</item>
+			<item type="int">
+				<name>status</name>
+				<remark>宝贝所处的状态</remark>
+			</item>
+			<item type="int">
+				<name>startTime</name>
+				<remark>宝贝的开始时间</remark>
+			</item>
+			<item type="int">
+				<name>existingBuyNum</name>
+				<remark>宝贝已经被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>needBuyNum</name>
+				<remark>贝总共需要被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>buyUnit</name>
+				<remark>购买宝贝需要的最小份数</remark>
+			</item>
+			<item type="int">
+				<name>defaultBuyUnit</name>
+				<remark>入购物车时的默认购买份数</remark>
+			</item>
+			<item type="int">
+				<name>lotteryTime</name>
+				<remark>宝贝开奖时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>remainTime</name>
+				<remark>宝贝开奖剩余时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>luckyCode</name>
+				<remark>幸运号码</remark>
+			</item>
+			<item type="dict">
+				<name>winner</name>
+				<remark>宝贝获奖者的信息dict</remark>
+				<item type="int">
+					<name>uid</name>
+					<remark>宝贝获奖者的用户id（用户唯一标识）</remark>
+				</item>
+				<item type="string">
+					<name>nickname</name>
+					<remark>获奖者昵称</remark>
+				</item>
+				<item type="string">
+					<name>mobile</name>
+					<remark>获奖者电话号码</remark>
+				</item>
+				<item type="string">
+					<name>imgUrl</name>
+					<remark>获奖者头像url</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winnerJoin</name>
+				<remark>获奖者参与本期信息</remark>
+				<item type="int">
+					<name>totalCnt</name>
+					<remark>获奖者总共参与本期的份数</remark>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>winner</name>
+		<apiulr>/duobao/api/v1/goods/winner</apiulr>
+		<function>获取宝贝winner</function>
+		<menuFolder>商品相关</menuFolder>
+		<menuText>获取宝贝winner</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>period</paraname>
+				<paraInstruction>期号id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>gid</paraname>
+				<paraInstruction>商品id</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>period</name>
+				<remark>宝贝的期数（第几期）</remark>
+			</item>
+			<item type="int">
+				<name>status</name>
+				<remark>宝贝所处的状态</remark>
+			</item>
+			<item type="int">
+				<name>luckyCode</name>
+				<remark>幸运号码</remark>
+			</item>
+			<item type="int">
+				<name>lotteryTime</name>
+				<remark>抽奖时间</remark>
+			</item>
+			<item type="dict">
+				<name>winner</name>
+				<remark>宝贝获奖者的信息dict</remark>
+				<item type="int">
+					<name>uid</name>
+					<remark>宝贝获奖者的用户id（用户唯一标识）</remark>
+				</item>
+				<item type="string">
+					<name>nickname</name>
+					<remark>获奖者昵称</remark>
+				</item>
+				<item type="string">
+					<name>mobile</name>
+					<remark>获奖者电话号码</remark>
+				</item>
+				<item type="string">
+					<name>imgUrl</name>
+					<remark>获奖者头像url</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winnerJoin</name>
+				<remark>获奖者参与本期信息</remark>
+				<item type="int">
+					<name>totalCnt</name>
+					<remark>获奖者总共参与本期的份数</remark>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>UserRecord</name>
+		<apiulr>/duobao/api/v1/user/userRecord</apiulr>
+		<function>获取用户夺宝记录</function>
+		<menuFolder>用户数据</menuFolder>
+		<menuText>获取用户夺宝记录</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>statusTab</paraname>
+				<paraInstruction>用户夺宝记录tab号码</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageNum</paraname>
+				<paraInstruction>第几页</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageSize</paraname>
+				<paraInstruction>页面的大小</paraInstruction>
+			</param>
+		</request>
+		<response type="json_list">
+			<item type="int">
+				<name>period</name>
+				<remark>宝贝的期数（第几期）</remark>
+			</item>
+			<item type="int">
+				<name>startTime</name>
+				<remark>宝贝的开始时间</remark>
+			</item>
+			<item type="int">
+				<name>status</name>
+				<remark>宝贝所处的状态</remark>
+			</item>
+			<item type="int">
+				<name>existingBuyNum</name>
+				<remark>宝贝已经被购买的份数， 这里肯定等于下面的needBuyNum</remark>
+			</item>
+			<item type="int">
+				<name>needBuyNum</name>
+				<remark>宝贝总共需要被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>buyUnit</name>
+				<remark>购买宝贝需要的最小份数（购买份数需是此数值的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>privilege</name>
+				<remark>商品默认排序优先级</remark>
+			</item>
+			<item type="int">
+				<name>defaultBuyUnit</name>
+				<remark>入购物车时的默认购买份数（这个数值也必须是buyUnit的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>lotteryTime</name>
+				<remark>宝贝开奖时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>remainTime</name>
+				<remark>宝贝开奖剩余时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>luckyCode</name>
+				<remark>幸运号码</remark>
+			</item>
+			<item type="dict">
+				<name>goods</name>
+				<remark>宝贝商品的详细信息dict</remark>
+				<item type="int">
+					<name>id</name>
+					<remark>商品id</remark>
+				</item>
+				<item type="list">
+					<name>thumbnails</name>
+					<remark>商品的小图list，里面存放了图片的url</remark>
+				</item>
+				<item type="list">
+					<name>displayImgs</name>
+					<remark>商品展示大图，里面存放了展示图片的url</remark>
+				</item>
+				<item type="string">
+					<name>name</name>
+					<remark>商品名称</remark>
+				</item>
+				<item type="string">
+					<name>title</name>
+					<remark>商品标题</remark>
+				</item>
+				<item type="string">
+					<name>subTitle</name>
+					<remark>商品副标题</remark>
+				</item>
+				<item type="int">
+					<name>categoryId</name>
+					<remark>商品种类id</remark>
+				</item>
+				<item type="string">
+					<name>desc</name>
+					<remark>商品描述</remark>
+				</item>
+				<item type="int">
+					<name>totalPeriod</name>
+					<remark>商品总共上架了多少期</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winnerJoin</name>
+				<remark>获奖者参与本期信息</remark>
+				<item type="int">
+					<name>totalCnt</name>
+					<remark>获奖者总共参与本期的份数</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>userJoin</name>
+				<remark>用户参与本期信息</remark>
+				<item type="int">
+					<name>totalCnt</name>
+					<remark>获奖者总共参与本期的份数</remark>
+				</item>
+				<item type="list">
+					<name>buyInfos</name>
+					<remark>用户购买记录列表(某一期用户可能会多次购买，故而用列表)</remark>
+					<item type="int">
+						<name>buyNum</name>
+						<remark>购买的份数</remark>
+					</item>
+					<item type="int">
+						<name>buyTime</name>
+						<remark>购买的时间戳， 精确到毫秒</remark>
+					</item>
+					<item type="list">
+						<name>buyCodes</name>
+						<remark>购买的抽奖号码list， list元素为int</remark>
+					</item>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>userWinRecord</name>
+		<apiulr>/duobao/api/v1/user/userWinRecord</apiulr>
+		<function>获取用户获奖记录</function>
+		<menuFolder>用户数据</menuFolder>
+		<menuText>获取用户获奖记录</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>statusTab</paraname>
+				<paraInstruction>用户夺宝记录tab号码</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageNum</paraname>
+				<paraInstruction>第几页</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageSize</paraname>
+				<paraInstruction>页面的大小</paraInstruction>
+			</param>
+		</request>
+		<response type="json_list">
+			<item type="int">
+				<name>period</name>
+				<remark>宝贝的期数（第几期）</remark>
+			</item>
+			<item type="int">
+				<name>startTime</name>
+				<remark>宝贝的开始时间</remark>
+			</item>
+			<item type="int">
+				<name>status</name>
+				<remark>宝贝所处的状态</remark>
+			</item>
+			<item type="int">
+				<name>existingBuyNum</name>
+				<remark>宝贝已经被购买的份数， 这里肯定等于下面的needBuyNum</remark>
+			</item>
+			<item type="int">
+				<name>needBuyNum</name>
+				<remark>宝贝总共需要被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>buyUnit</name>
+				<remark>购买宝贝需要的最小份数（购买份数需是此数值的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>defaultBuyUnit</name>
+				<remark>入购物车时的默认购买份数（这个数值也必须是buyUnit的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>lotteryTime</name>
+				<remark>宝贝开奖时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>remainTime</name>
+				<remark>宝贝开奖剩余时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>luckyCode</name>
+				<remark>幸运号码</remark>
+			</item>
+			<item type="dict">
+				<name>goods</name>
+				<remark>宝贝商品的详细信息dict</remark>
+				<item type="int">
+					<name>id</name>
+					<remark>商品id</remark>
+				</item>
+				<item type="list">
+					<name>thumbnails</name>
+					<remark>商品的小图list，里面存放了图片的url</remark>
+				</item>
+				<item type="list">
+					<name>displayImgs</name>
+					<remark>商品展示大图，里面存放了展示图片的url</remark>
+				</item>
+				<item type="string">
+					<name>name</name>
+					<remark>商品名称</remark>
+				</item>
+				<item type="string">
+					<name>title</name>
+					<remark>商品标题</remark>
+				</item>
+				<item type="string">
+					<name>subTitle</name>
+					<remark>商品副标题</remark>
+				</item>
+				<item type="int">
+					<name>categoryId</name>
+					<remark>商品种类id</remark>
+				</item>
+				<item type="string">
+					<name>desc</name>
+					<remark>商品描述</remark>
+				</item>
+				<item type="int">
+					<name>totalPeriod</name>
+					<remark>商品总共上架了多少期</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winner</name>
+				<remark>宝贝获奖者的信息dict</remark>
+				<item type="int">
+					<name>uid</name>
+					<remark>宝贝获奖者的用户id（用户唯一标识）</remark>
+				</item>
+				<item type="string">
+					<name>nickname</name>
+					<remark>获奖者昵称</remark>
+				</item>
+				<item type="string">
+					<name>mobile</name>
+					<remark>获奖者电话号码</remark>
+				</item>
+				<item type="string">
+					<name>imgUrl</name>
+					<remark>获奖者头像url</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winnerJoin</name>
+				<remark>用户参与本期信息</remark>
+				<item type="int">
+					<name>totalCnt</name>
+					<remark>获奖者总共参与本期的份数</remark>
+				</item>
+				<item type="int">
+					<name>status</name>
+					<remark>获奖者获奖订单状态</remark>
+				</item>
+				<item type="int">
+					<name>winningTime</name>
+					<remark>获奖者获奖时间</remark>
+				</item>
+				<item type="int">
+					<name>confirmAddressTime</name>
+					<remark>获奖者确认时间</remark>
+				</item>
+				<item type="int">
+					<name>sendingTime</name>
+					<remark>发货时间</remark>
+				</item>
+				<item type="int">
+					<name>confirmReceivedTime</name>
+					<remark>确认收货时间</remark>
+				</item>
+				<item type="list">
+					<name>buyInfos</name>
+					<remark>用户购买记录列表</remark>
+					<item type="int">
+						<name>buyNum</name>
+						<remark>购买的份数</remark>
+					</item>
+					<item type="int">
+						<name>buyTime</name>
+						<remark>购买的时间戳， 精确到毫秒</remark>
+					</item>
+					<item type="list">
+						<name>buyCodes</name>
+						<remark>购买的抽奖号码list， list元素为int</remark>
+					</item>
+				</item>
+				<item type="dict">
+					<name>addressInfo</name>
+					<remark>送货地址信息dict</remark>
+					<item type="string">
+						<name>name</name>
+						<remark>收货人姓名</remark>
+					</item>
+					<item type="string">
+						<name>mobile</name>
+						<remark>收货人电话号码</remark>
+					</item>
+					<item type="string">
+						<name>area</name>
+						<remark>收货人区域</remark>
+					</item>
+					<item type="string">
+						<name>city</name>
+						<remark>收货人所在城市</remark>
+					</item>
+					<item type="string">
+						<name>detailAddress</name>
+						<remark>收货人详细地址描述</remark>
+					</item>
+				</item>
+				<item type="dict">
+					<name>logisticsInfo</name>
+					<remark>物流信息</remark>
+					<item type="string">
+						<name>logisticsName</name>
+						<remark>物流名称</remark>
+					</item>
+					<item type="string">
+						<name>ogisticsNumber</name>
+						<remark>物流单号</remark>
+					</item>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>getUserCartRecord</name>
+		<apiulr>/duobao/api/v1/user/userCartRecord</apiulr>
+		<function>获取用户购物车记录</function>
+		<menuFolder>购物车</menuFolder>
+		<menuText>获取用户购物车记录</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+		</request>
+		<response type="json_list">
+			<item type="int">
+				<name>period</name>
+				<remark>宝贝的期数（第几期）</remark>
+			</item>
+			<item type="int">
+				<name>status</name>
+				<remark>宝贝所处的状态</remark>
+			</item>
+			<item type="int">
+				<name>startTime</name>
+				<remark>宝贝的开始时间</remark>
+			</item>
+			<item type="int">
+				<name>existingBuyNum</name>
+				<remark>宝贝已经被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>needBuyNum</name>
+				<remark>宝贝总共需要被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>buyUnit</name>
+				<remark>购买宝贝需要的最小份数（购买份数需是此数值的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>defaultBuyUnit</name>
+				<remark>	入购物车时的默认购买份数（这个数值也必须是buyUnit的整数倍）</remark>
+			</item>
+			<item type="dict">
+				<name>good</name>
+				<remark>宝贝商品的详细信息dict</remark>
+				<item type="int">
+					<name>id</name>
+					<remark>商品id</remark>
+				</item>
+				<item type="list">
+					<name>thumbnails</name>
+					<remark>商品的小图list，里面存放了图片的url</remark>
+				</item>
+				<item type="list">
+					<name>displayImgs</name>
+					<remark>商品展示大图，里面存放了展示图片的url</remark>
+				</item>
+				<item type="string">
+					<name>name</name>
+					<remark>商品名称</remark>
+				</item>
+				<item type="string">
+					<name>title</name>
+					<remark>商品标题</remark>
+				</item>
+				<item type="string">
+					<name>subTitle</name>
+					<remark>商品副标题</remark>
+				</item>
+				<item type="int">
+					<name>categoryId</name>
+					<remark>商品种类id</remark>
+				</item>
+				<item type="string">
+					<name>desc</name>
+					<remark>商品描述</remark>
+				</item>
+				<item type="int">
+					<name>totalPeriod</name>
+					<remark>商品总共上架了多少期</remark>
+				</item>
+				<item type="dict">
+					<name>cartInfo</name>
+					<remark>购物车记录信息dict</remark>
+					<item type="int">
+						<name>cut</name>
+						<remark>购物车准备购买数量发生了切割的个数</remark>
+					</item>
+					<item type="int">
+						<name>num</name>
+						<remark>购物车里购买的份数</remark>
+					</item>
+					<item type="int">
+						<name>cartId</name>
+						<remark>购物车id， 唯一标识购物车</remark>
+					</item>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>addUserCartRecord</name>
+		<apiulr>/duobao/api/v1/user/userCartRecord</apiulr>
+		<function>添加商品到用户购物车</function>
+		<menuFolder>购物车</menuFolder>
+		<menuText>添加商品到用户购物车</menuText>
+		<request type="PUT">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>gids</paraname>
+				<paraInstruction>多个商品id经过“，”拼接起来的字符串</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>periods</paraname>
+				<paraInstruction>多个期号经过“，”拼接起来的字符串</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>nums</paraname>
+				<paraInstruction>多个购买数量经过“，”拼接起来的字符串</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+		</response>
+	</api>
+	<api>
+		<name>updateUserCartRecord</name>
+		<apiulr>/duobao/api/v1/user/userCartRecord</apiulr>
+		<function>更新用户购物车记录</function>
+		<menuFolder>购物车</menuFolder>
+		<menuText>更新用户购物车记录</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>cartId</paraname>
+				<paraInstruction>用户购物车id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>num</paraname>
+				<paraInstruction>更新到的购买数量</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+		</response>
+	</api>
+	<api>
+		<name>delUserCartRecord</name>
+		<apiulr>/duobao/api/v1/user/userCartRecord</apiulr>
+		<function>删除用户购物车记录</function>
+		<menuFolder>购物车</menuFolder>
+		<menuText>删除用户购物车记录</menuText>
+		<request type="DELETE">
+			<param type="string" compulsory="true">
+				<paraname>cartIds</paraname>
+				<paraInstruction>用户购物车id串,由多个购物车id加上分隔符“，”构成</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+		</response>
+	</api>
+	<api>
+		<name>userInfo</name>
+		<apiulr>/duobao/api/v1/user/userInfo</apiulr>
+		<function>获取用户信息</function>
+		<menuFolder>用户数据</menuFolder>
+		<menuText>获取用户信息</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>uid</name>
+				<remark>用户id（用户唯一标识)</remark>
+			</item>
+			<item type="string">
+				<name>nickname</name>
+				<remark>用户昵称</remark>
+			</item>
+			<item type="string">
+				<name>mobile</name>
+				<remark>用户电话号码</remark>
+			</item>
+			<item type="string">
+				<name>imgUrl</name>
+				<remark>用户头像url</remark>
+			</item>
+			<item type="int">
+				<name>balance</name>
+				<remark>用户账户的剩余coin</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>getRechargeRecord</name>
+		<apiulr>/duobao/api/v1/user/rechargeRecord</apiulr>
+		<function>获取用户充值记录</function>
+		<menuFolder>充值支付</menuFolder>
+		<menuText>获取用户充值记录</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageNum</paraname>
+				<paraInstruction>充值记录页数</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageSize</paraname>
+				<paraInstruction>充值记录一页的大小</paraInstruction>
+			</param>
+		</request>
+		<response type="json_list">
+			<item type="int">
+				<name>rechargeId</name>
+				<remark>充值id</remark>
+			</item>
+			<item type="string">
+				<name>bankCode</name>
+				<remark>第三方充值代码</remark>
+			</item>
+			<item type="int">
+				<name>rechargeTime	</name>
+				<remark>充值时间</remark>
+			</item>
+			<item type="int">
+				<name>rechargeNum</name>
+				<remark>充值金额</remark>
+			</item>
+			<item type="int">
+				<name>success</name>
+				<remark>是否成功支付,0-失败,1-成功</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>getDisplayRecord</name>
+		<apiulr>/duobao/api/v1/user/displayRecord</apiulr>
+		<function>获取用户晒单记录</function>
+		<menuFolder>用户数据</menuFolder>
+		<menuText>获取用户晒单记录</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>currentUser</paraname>
+				<paraInstruction>标记位,表示“是否是本用户请求本人的晒单记录”，如果是，则返回的晒单列表中包含了此用户中奖但未来得及晒单的列表项； 0-否，1-是</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageNum</paraname>
+				<paraInstruction>晒单记录页数</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageSize</paraname>
+				<paraInstruction>晒单记录一页的大小</paraInstruction>
+			</param>
+		</request>
+		<response type="json_list">
+			<item type="int">
+				<name>period</name>
+				<remark>宝贝的期数（第几期）</remark>
+			</item>
+			<item type="int">
+				<name>startTime</name>
+				<remark>宝贝的开始时间</remark>
+			</item>
+			<item type="int">
+				<name>status</name>
+				<remark>宝贝所处的状态</remark>
+			</item>
+			<item type="int">
+				<name>existingBuyNum</name>
+				<remark>宝贝已经被购买的份数， 这里肯定等于下面的needBuyNum</remark>
+			</item>
+			<item type="int">
+				<name>needBuyNum</name>
+				<remark>宝贝总共需要被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>buyUnit</name>
+				<remark>购买宝贝需要的最小份数（购买份数需是此数值的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>privilege</name>
+				<remark>商品默认排序优先级</remark>
+			</item>
+			<item type="int">
+				<name>defaultBuyUnit</name>
+				<remark>入购物车时的默认购买份数（这个数值也必须是buyUnit的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>lotteryTime</name>
+				<remark>宝贝开奖时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>remainTime</name>
+				<remark>宝贝开奖剩余时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>luckyCode</name>
+				<remark>幸运号码</remark>
+			</item>
+			<item type="dict">
+				<name>goods</name>
+				<remark>宝贝商品的详细信息dict</remark>
+				<item type="int">
+					<name>id</name>
+					<remark>商品id</remark>
+				</item>
+				<item type="list">
+					<name>thumbnails</name>
+					<remark>商品的小图list，里面存放了图片的url</remark>
+				</item>
+				<item type="list">
+					<name>displayImgs</name>
+					<remark>商品展示大图，里面存放了展示图片的url</remark>
+				</item>
+				<item type="string">
+					<name>name</name>
+					<remark>商品名称</remark>
+				</item>
+				<item type="string">
+					<name>title</name>
+					<remark>商品标题</remark>
+				</item>
+				<item type="string">
+					<name>subTitle</name>
+					<remark>商品副标题</remark>
+				</item>
+				<item type="int">
+					<name>categoryId</name>
+					<remark>商品种类id</remark>
+				</item>
+				<item type="string">
+					<name>desc</name>
+					<remark>商品描述</remark>
+				</item>
+				<item type="int">
+					<name>totalPeriod</name>
+					<remark>商品总共上架了多少期</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winner</name>
+				<remark>宝贝获奖者的信息dict</remark>
+				<item type="int">
+					<name>uid</name>
+					<remark>宝贝获奖者的用户id（用户唯一标识）</remark>
+				</item>
+				<item type="string">
+					<name>nickname</name>
+					<remark>获奖者昵称</remark>
+				</item>
+				<item type="string">
+					<name>mobile</name>
+					<remark>获奖者电话号码</remark>
+				</item>
+				<item type="string">
+					<name>imgUrl</name>
+					<remark>获奖者头像url</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winnerJoin</name>
+				<remark>获奖者参与本期信息</remark>
+				<item type="int">
+					<name>totalCnt</name>
+					<remark>获奖者总共参与本期的份数</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>displayInfo</name>
+				<remark>晒单info dict</remark>
+				<item type="string">
+					<name>title</name>
+					<remark>晒单title</remark>
+				</item>
+				<item type="string">
+					<name>content</name>
+					<remark>晒单内容</remark>
+				</item>
+				<item type="int">
+					<name>time</name>
+					<remark>晒单时间</remark>
+				</item>
+				<item type="list">
+					<name>imgUrls</name>
+					<remark>晒单照片数组</remark>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>uploadDisplayRecord</name>
+		<apiulr>/duobao/api/v1/user/displayRecord</apiulr>
+		<function>上传用户晒单记录</function>
+		<menuFolder>用户数据</menuFolder>
+		<menuText>上传用户晒单记录</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>period</paraname>
+				<paraInstruction>商品期数</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>title</paraname>
+				<paraInstruction>晒单标题</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>content</paraname>
+				<paraInstruction>晒单内容</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>image[0-7]</paraname>
+				<paraInstruction>晒单图片（上传文件）， 目前最多8张， 因此param的名字从image0 到 image7</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+		</response>
+	</api>
+	<api>
+		<name>getDisplayRecord</name>
+		<apiulr>/duobao/api/v1/goods/displayRecord</apiulr>
+		<function>获取商品往期晒单记录</function>
+		<menuFolder>商品相关</menuFolder>
+		<menuText>晒单记录</menuText>
+		<request type="GET">
+			<param type="int" compulsory="true">
+				<paraname>gid</paraname>
+				<paraInstruction>商品id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageNum</paraname>
+				<paraInstruction>晒单记录页数</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>pageSize</paraname>
+				<paraInstruction>晒单记录一页的大小</paraInstruction>
+			</param>
+		</request>
+		<response type="json_list">
+			<item type="int">
+				<name>period</name>
+				<remark>宝贝的期数（第几期）</remark>
+			</item>
+			<item type="int">
+				<name>startTime</name>
+				<remark>宝贝的开始时间</remark>
+			</item>
+			<item type="int">
+				<name>status</name>
+				<remark>宝贝所处的状态</remark>
+			</item>
+			<item type="int">
+				<name>existingBuyNum</name>
+				<remark>宝贝已经被购买的份数， 这里肯定等于下面的needBuyNum</remark>
+			</item>
+			<item type="int">
+				<name>needBuyNum</name>
+				<remark>宝贝总共需要被购买的份数</remark>
+			</item>
+			<item type="int">
+				<name>buyUnit</name>
+				<remark>购买宝贝需要的最小份数（购买份数需是此数值的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>defaultBuyUnit</name>
+				<remark>入购物车时的默认购买份数（这个数值也必须是buyUnit的整数倍）</remark>
+			</item>
+			<item type="int">
+				<name>lotteryTime</name>
+				<remark>宝贝开奖时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>remainTime</name>
+				<remark>宝贝开奖剩余时间， 精确到毫秒级</remark>
+			</item>
+			<item type="int">
+				<name>luckyCode</name>
+				<remark>幸运号码</remark>
+			</item>
+			<item type="dict">
+				<name>goods</name>
+				<remark>宝贝商品的详细信息dict</remark>
+				<item type="int">
+					<name>id</name>
+					<remark>商品id</remark>
+				</item>
+				<item type="list">
+					<name>thumbnails</name>
+					<remark>商品的小图list，里面存放了图片的url</remark>
+				</item>
+				<item type="list">
+					<name>displayImgs</name>
+					<remark>商品展示大图，里面存放了展示图片的url</remark>
+				</item>
+				<item type="string">
+					<name>name</name>
+					<remark>商品名称</remark>
+				</item>
+				<item type="string">
+					<name>title</name>
+					<remark>商品标题</remark>
+				</item>
+				<item type="string">
+					<name>subTitle</name>
+					<remark>商品副标题</remark>
+				</item>
+				<item type="int">
+					<name>categoryId</name>
+					<remark>商品种类id</remark>
+				</item>
+				<item type="string">
+					<name>desc</name>
+					<remark>商品描述</remark>
+				</item>
+				<item type="int">
+					<name>totalPeriod</name>
+					<remark>商品总共上架了多少期</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winner</name>
+				<remark>宝贝获奖者的信息dict</remark>
+				<item type="int">
+					<name>uid</name>
+					<remark>宝贝获奖者的用户id（用户唯一标识）</remark>
+				</item>
+				<item type="string">
+					<name>nickname</name>
+					<remark>获奖者昵称</remark>
+				</item>
+				<item type="string">
+					<name>mobile</name>
+					<remark>获奖者电话号码</remark>
+				</item>
+				<item type="string">
+					<name>imgUrl</name>
+					<remark>获奖者头像url</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>winnerJoin</name>
+				<remark>获奖者参与本期信息</remark>
+				<item type="int">
+					<name>totalCnt</name>
+					<remark>获奖者总共参与本期的份数</remark>
+				</item>
+			</item>
+			<item type="dict">
+				<name>displayInfo</name>
+				<remark>晒单info dict</remark>
+				<item type="string">
+					<name>content</name>
+					<remark>晒单内容</remark>
+				</item>
+				<item type="int">
+					<name>time</name>
+					<remark>晒单时间</remark>
+				</item>
+				<item type="list">
+					<name>imgUrls</name>
+					<remark>晒单照片数组</remark>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>userAddress</name>
+		<apiulr>/duobao/api/v1/user/userAddress</apiulr>
+		<function>获取用户配送地址</function>
+		<menuFolder>用户数据</menuFolder>
+		<menuText>获取用户配送地址</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+		</request>
+		<response type="json_list">
+			<item type="int">
+				<name>addressId</name>
+				<remark>地址id</remark>
+			</item>
+			<item type="string">
+				<name>name</name>
+				<remark>收货人姓名</remark>
+			</item>
+			<item type="string">
+				<name>mobile</name>
+				<remark>收货人电话号码</remark>
+			</item>
+			<item type="string">
+				<name>area</name>
+				<remark>收货人所处区域</remark>
+			</item>
+			<item type="string">
+				<name>city</name>
+				<remark>收货人所处城市</remark>
+			</item>
+			<item type="string">
+				<name>detailAddress</name>
+				<remark>收货人详细地址描述</remark>
+			</item>
+			<item type="int">
+				<name>defaultAddress</name>
+				<remark>是否是默认地址 0-否， 1-是</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>addUserAddress</name>
+		<apiulr>/duobao/api/v1/user/userAddress</apiulr>
+		<function>添加用户配送地址</function>
+		<menuFolder>用户数据</menuFolder>
+		<menuText>添加用户配送地址</menuText>
+		<request type="PUT">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>name</paraname>
+				<paraInstruction>收货人姓名</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>mobile</paraname>
+				<paraInstruction>收货人电话号码</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>area</paraname>
+				<paraInstruction>收货人所在区域</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>city</paraname>
+				<paraInstruction>收货人所处城市</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>detailAddress</paraname>
+				<paraInstruction>收货人详细地址描述</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>defaultAddress</paraname>
+				<paraInstruction>是否是默认地址， 0-否， 1-是</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>addressId</name>
+				<remark>新生成的地址id</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>delUserAddress</name>
+		<apiulr>/duobao/api/v1/user/userAddress</apiulr>
+		<function>删除用户配送地址</function>
+		<menuFolder>用户数据</menuFolder>
+		<menuText>删除用户配送地址</menuText>
+		<request type="DELETE">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>addressId</paraname>
+				<paraInstruction>地址id</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+		</response>
+	</api>
+	<api>
+		<name>updateUserAddress</name>
+		<apiulr>/duobao/api/v1/user/updateUserAddress</apiulr>
+		<function>修改用户配送地址</function>
+		<menuFolder>用户数据</menuFolder>
+		<menuText>修改用户配送地址</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>addressId</paraname>
+				<paraInstruction>地址id</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>name</paraname>
+				<paraInstruction>收货人姓名</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>mobile</paraname>
+				<paraInstruction>收货人电话号码</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>area</paraname>
+				<paraInstruction>收货人所在区域</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>city</paraname>
+				<paraInstruction>收货人所处城市</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>detailAddress</paraname>
+				<paraInstruction>收货人详细地址描述</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>defaultAddress</paraname>
+				<paraInstruction>是否是默认地址， 0-否， 1-是</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+		</response>
+	</api>
+	<api>
+		<name>ensureSendingAddress</name>
+		<apiulr>/duobao/api/v1/user/sendingAddress</apiulr>
+		<function>确认配送地址</function>
+		<menuFolder>用户数据</menuFolder>
+		<menuText>确认配送地址</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>addressId</paraname>
+				<paraInstruction>地址id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>period</paraname>
+				<paraInstruction>期号</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>time</name>
+				<remark>确认地址时间</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>ensureReceivingTreasure</name>
+		<apiulr>/duobao/api/v1/user/receivingTreasure</apiulr>
+		<function>确认收货</function>
+		<menuFolder>用户数据</menuFolder>
+		<menuText>确认收货</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>period</paraname>
+				<paraInstruction>期号</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>time</name>
+				<remark>确认地址时间</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>submitUserCartRecord</name>
+		<apiulr>/duobao/api/v1/user/submitUserCartRecord</apiulr>
+		<function>提交购物车</function>
+		<menuFolder>购物车</menuFolder>
+		<menuText>提交购物车</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>coins</name>
+				<remark>需要支付的总的coin数</remark>
+			</item>
+			<item type="int">
+				<name>listCnt</name>
+				<remark>需要支付的总的购物车订单个数</remark>
+			</item>
+			<item type="list">
+				<name>list</name>
+				<remark>夺宝记录list</remark>
+				<item type="int">
+					<name>period</name>
+					<remark>宝贝的期数（第几期）</remark>
+				</item>
+				<item type="int">
+					<name>startTime</name>
+					<remark>宝贝的开始时间</remark>
+				</item>
+				<item type="int">
+					<name>status</name>
+					<remark>宝贝所处的状态</remark>
+				</item>
+				<item type="int">
+					<name>existingBuyNum</name>
+					<remark>宝贝已经被购买的份数， 这里肯定等于下面的needBuyNum</remark>
+				</item>
+				<item type="int">
+					<name>needBuyNum</name>
+					<remark>宝贝总共需要被购买的份数</remark>
+				</item>
+				<item type="int">
+					<name>buyUnit</name>
+					<remark>购买宝贝需要的最小份数（购买份数需是此数值的整数倍）</remark>
+				</item>
+				<item type="int">
+					<name>defaultBuyUnit</name>
+					<remark>入购物车时的默认购买份数（这个数值也必须是buyUnit的整数倍）</remark>
+				</item>
+				<item type="dict">
+					<name>goods</name>
+					<remark>宝贝商品的详细信息dict</remark>
+					<item type="int">
+						<name>id</name>
+						<remark>商品id</remark>
+					</item>
+					<item type="list">
+						<name>thumbnails</name>
+						<remark>商品的小图list，里面存放了图片的url</remark>
+					</item>
+					<item type="list">
+						<name>displayImgs</name>
+						<remark>商品展示大图，里面存放了展示图片的url</remark>
+					</item>
+					<item type="string">
+						<name>name</name>
+						<remark>商品名称</remark>
+					</item>
+					<item type="string">
+						<name>title</name>
+						<remark>商品标题</remark>
+					</item>
+					<item type="string">
+						<name>subTitle</name>
+						<remark>商品副标题</remark>
+					</item>
+					<item type="int">
+						<name>categoryId</name>
+						<remark>商品种类id</remark>
+					</item>
+					<item type="string">
+						<name>desc</name>
+						<remark>商品描述</remark>
+					</item>
+					<item type="int">
+						<name>totalPeriod</name>
+						<remark>商品总共上架了多少期</remark>
+					</item>
+					<item type="dict">
+						<name>cartInfo</name>
+						<remark>购物车记录信息dict</remark>
+						<item type="int">
+							<name>cut</name>
+							<remark>购物车准备购买数量发生了切割的个数</remark>
+						</item>
+						<item type="int">
+							<name>num</name>
+							<remark>购物车里购买的份数</remark>
+						</item>
+						<item type="int">
+							<name>cartId</name>
+							<remark>购物车id， 唯一标识购物车</remark>
+						</item>
+					</item>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>readyPay</name>
+		<apiulr>/duobao/api/v1/user/readyPay</apiulr>
+		<function>预备支付（确认支付， 生成支付id供后续支付流程）</function>
+		<menuFolder>充值支付</menuFolder>
+		<menuText>预备支付</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="string" compulsory="true">
+				<paraname>bankCode</paraname>
+				<paraInstruction>第三方支付代码</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>totalCoin</paraname>
+				<paraInstruction>需要支付的总coin数</paraInstruction>
+			</param>
+			<param type="bool" compulsory="true">
+				<paraname>isRecharge</paraname>
+				<paraInstruction>标识是否属于充值支付预备， true-是</paraInstruction>
+			</param>
+			<param type="bool" compulsory="true">
+				<paraname>isUseCoin</paraname>
+				<paraInstruction>标识是否使用余额coins，true-用</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>payId</name>
+				<remark>生成的支付id， 一个支付id对应多个购物车订单, 若此值为0，则表示购物车里的商品已经卖光了</remark>
+			</item>
+			<item type="bool">
+				<name>isUseBank</name>
+				<remark>是否需要使用第三方支付来付账， true-需要</remark>
+			</item>
+			<item type="int">
+				<name>useCoin</name>
+				<remark>当余额不足的情况下， 此值为使用了多少余额来支付； otherwise， 此值为0</remark>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>confirmPay</name>
+		<apiulr>/duobao/api/v1/user/confirmPay</apiulr>
+		<function>确认已支付</function>
+		<menuFolder>充值支付</menuFolder>
+		<menuText>确认已支付</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>payId</paraname>
+				<paraInstruction>支付id</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>code</name>
+				<remark>结果状态码</remark>
+			</item>
+			<item type="dict">
+				<name>result</name>
+				<remark>返回的结果dict</remark>
+				<item type="int">
+					<name>resultStatus</name>
+					<remark>返回的结果状态码</remark>
+				</item>
+				<item type="list">
+					<name>list</name>
+					<remark>成功购买列表</remark>
+					<item type="int">
+						<name>period</name>
+						<remark>宝贝的期数（第几期）</remark>
+					</item>
+					<item type="int">
+						<name>startTime</name>
+						<remark>宝贝的开始时间</remark>
+					</item>
+					<item type="int">
+						<name>status</name>
+						<remark>宝贝所处的状态</remark>
+					</item>
+					<item type="int">
+						<name>existingBuyNum</name>
+						<remark>宝贝已经被购买的份数， 这里肯定等于下面的needBuyNum</remark>
+					</item>
+					<item type="int">
+						<name>needBuyNum</name>
+						<remark>宝贝总共需要被购买的份数</remark>
+					</item>
+					<item type="int">
+						<name>buyUnit</name>
+						<remark>购买宝贝需要的最小份数（购买份数需是此数值的整数倍）</remark>
+					</item>
+					<item type="int">
+						<name>defaultBuyUnit</name>
+						<remark>入购物车时的默认购买份数（这个数值也必须是buyUnit的整数倍）</remark>
+					</item>
+					<item type="int">
+						<name>privilege</name>
+						<remark>商品默认排序优先级</remark>
+					</item>
+					<item type="dict">
+						<name>goods</name>
+						<remark>贝商品的详细信息dict</remark>
+						<item type="int">
+							<name>id</name>
+							<remark>商品id</remark>
+						</item>
+						<item type="list">
+							<name>thumbnails</name>
+							<remark>商品的小图list，里面存放了图片的url</remark>
+						</item>
+						<item type="list">
+							<name>displayImgs</name>
+							<remark>商品展示大图，里面存放了展示图片的url</remark>
+						</item>
+						<item type="string">
+							<name>name</name>
+							<remark>商品名称</remark>
+						</item>
+						<item type="string">
+							<name>title</name>
+							<remark>商品标题</remark>
+						</item>
+						<item type="string">
+							<name>subTitle</name>
+							<remark>商品副标题</remark>
+						</item>
+						<item type="int">
+							<name>categoryId</name>
+							<remark>商品种类id</remark>
+						</item>
+						<item type="string">
+							<name>desc</name>
+							<remark>商品描述</remark>
+						</item>
+						<item type="int">
+							<name>totalPeriod</name>
+							<remark>商品总共上架了多少期</remark>
+						</item>
+						<item type="dict">
+							<name>userJoin</name>
+							<remark>用户购买记录</remark>
+							<item type="int">
+								<name>totalCnt</name>
+								<remark>用户购买记录</remark>
+							</item>
+							<item type="int">
+								<name>buyInfos</name>
+								<remark>记录个数， 这里应该恒为1</remark>
+							</item>
+							<item type="int">
+								<name>buyNum</name>
+								<remark>购买的份数</remark>
+							</item>
+							<item type="int">
+								<name>buyTime</name>
+								<remark>购买的时间戳， 精确到毫秒</remark>
+							</item>
+							<item type="list">
+								<name>buyCodes</name>
+								<remark>购买的抽奖号码list， list元素为int</remark>
+							</item>
+						</item>
+					</item>
+				</item>
+				<item type="list">
+					<name>failList</name>
+					<remark>失败购买列表</remark>
+					<item type="int">
+						<name>period</name>
+						<remark>宝贝的期数（第几期）</remark>
+					</item>
+					<item type="int">
+						<name>startTime</name>
+						<remark>宝贝的开始时间</remark>
+					</item>
+					<item type="int">
+						<name>status</name>
+						<remark>宝贝所处的状态</remark>
+					</item>
+					<item type="int">
+						<name>existingBuyNum</name>
+						<remark>宝贝已经被购买的份数， 这里肯定等于下面的needBuyNum</remark>
+					</item>
+					<item type="int">
+						<name>needBuyNum</name>
+						<remark>宝贝总共需要被购买的份数</remark>
+					</item>
+					<item type="int">
+						<name>buyUnit</name>
+						<remark>购买宝贝需要的最小份数（购买份数需是此数值的整数倍）</remark>
+					</item>
+					<item type="int">
+						<name>defaultBuyUnit</name>
+						<remark>入购物车时的默认购买份数（这个数值也必须是buyUnit的整数倍）</remark>
+					</item>
+					<item type="int">
+						<name>privilege</name>
+						<remark>商品默认排序优先级</remark>
+					</item>
+					<item type="dict">
+						<name>goods</name>
+						<remark>贝商品的详细信息dict</remark>
+						<item type="int">
+							<name>id</name>
+							<remark>商品id</remark>
+						</item>
+						<item type="list">
+							<name>thumbnails</name>
+							<remark>商品的小图list，里面存放了图片的url</remark>
+						</item>
+						<item type="list">
+							<name>displayImgs</name>
+							<remark>商品展示大图，里面存放了展示图片的url</remark>
+						</item>
+						<item type="string">
+							<name>name</name>
+							<remark>商品名称</remark>
+						</item>
+						<item type="string">
+							<name>title</name>
+							<remark>商品标题</remark>
+						</item>
+						<item type="string">
+							<name>subTitle</name>
+							<remark>商品副标题</remark>
+						</item>
+						<item type="int">
+							<name>categoryId</name>
+							<remark>商品种类id</remark>
+						</item>
+						<item type="string">
+							<name>desc</name>
+							<remark>商品描述</remark>
+						</item>
+						<item type="int">
+							<name>totalPeriod</name>
+							<remark>商品总共上架了多少期</remark>
+						</item>
+						<item type="dict">
+							<name>userJoin</name>
+							<remark>用户购买记录</remark>
+							<item type="int">
+								<name>totalCnt</name>
+								<remark>用户购买记录</remark>
+							</item>
+							<item type="int">
+								<name>buyInfos</name>
+								<remark>记录个数， 这里应该恒为1</remark>
+							</item>
+							<item type="int">
+								<name>buyNum</name>
+								<remark>购买的份数</remark>
+							</item>
+							<item type="int">
+								<name>buyTime</name>
+								<remark>购买的时间戳， 精确到毫秒</remark>
+							</item>
+							<item type="list">
+								<name>buyCodes</name>
+								<remark>购买的抽奖号码list， list元素为int</remark>
+							</item>
+						</item>
+					</item>
+				</item>
+				<item type="dict">
+					<name>rechargeInfo</name>
+					<remark>充值信息</remark>
+					<item type="int">
+						<name>rechargeId</name>
+						<remark>充值id</remark>
+					</item>
+					<item type="int">
+						<name>rechargeTime</name>
+						<remark>充值时间</remark>
+					</item>
+					<item type="int">
+						<name>rechargeNum</name>
+						<remark>充值coin数</remark>
+					</item>
+				</item>
+			</item>
+		</response>
+	</api>
+	<api>
+		<name>wxPayInfo</name>
+		<apiulr>/duobao/api/v1/pay/wxPayInfo</apiulr>
+		<function>服务端向微信服务请求生成微信订单号等支付信息， 转发给客户端，供客户端后续支付流程中使用</function>
+		<menuFolder>充值支付</menuFolder>
+		<menuText>生成微信订单</menuText>
+		<request type="POST">
+			<param type="int" compulsory="true">
+				<paraname>uid</paraname>
+				<paraInstruction>用户id</paraInstruction>
+			</param>
+			<param type="int" compulsory="true">
+				<paraname>payId</paraname>
+				<paraInstruction>支付id</paraInstruction>
+			</param>
+		</request>
+		<response type="json_dict">
+			<item type="int">
+				<name>code</name>
+				<remark>结果状态码</remark>
+			</item>
+			<item type="dict">
+				<name>result</name>
+				<remark>返回的结果dict</remark>
+				<item type="string">
+					<name/>
+					<remark/>
+				</item>
+				<item type="string">
+					<name>nonceStr</name>
+					<remark>微信服务生成的随机字符串</remark>
+				</item>
+				<item type="string">
+					<name>sign</name>
+					<remark>微信服务生成的签名</remark>
+				</item>
+				<item type="string">
+					<name>prepayId</name>
+					<remark>微信服务生成的支付id</remark>
+				</item>
+				<item type="string">
+					<name>appId</name>
+					<remark>微信公众号id</remark>
+				</item>
+				<item type="string">
+					<name>partnerId</name>
+					<remark>微信商户id</remark>
+				</item>
+				<item type="string">
+					<name>packageValue</name>
+					<remark>微信包字符串， 目前写死为“Sign=WXPay”</remark>
+				</item>
+				<item type="int">
+					<name>timeStamp</name>
+					<remark>服务器返回的时间戳， 精确到毫秒</remark>
+				</item>
+			</item>
+		</response>
+	</api>
+</root>
