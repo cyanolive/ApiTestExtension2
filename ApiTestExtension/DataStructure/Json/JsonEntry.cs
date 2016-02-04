@@ -12,21 +12,22 @@ namespace ApiTestExtension2.DataStructure.Json
         public JsonEntryType type = JsonEntryType.DEFAULT;
         public List<JsonEntry> entryList = new List<JsonEntry>();
         public Dictionary<String, JsonEntry> entryDict = new Dictionary<string, JsonEntry>();
-        public int intValue;
+        public long intValue;
         public String stringValue;
+        public bool boolValue;
 
         public static JsonEntry analyzeFromJsonToken(JToken jt)
         {
             JsonEntry result = new JsonEntry();
 
-            try
-            {
+            //try
+            //{
                 switch (jt.Type)
                 {
                     case JTokenType.Array:
                         if ((jt as JArray).Count > 0)
                         {
-                            result.type = JsonEntryType.LIST_ENTRY;
+                            result.type = JsonEntryType.LIST;
                             foreach (JToken jtItem in (jt as JArray))
                             {
                                 result.entryList.Add(analyzeFromJsonToken(jtItem));
@@ -58,18 +59,22 @@ namespace ApiTestExtension2.DataStructure.Json
                         break;
                     case JTokenType.Integer:
                         result.type = JsonEntryType.INT;
-                        result.intValue = (int)(jt as JValue).Value;
+                        result.intValue = Convert.ToInt64((jt as JValue).Value);
+                        break;
+                    case JTokenType.Boolean:
+                        result.type = JsonEntryType.BOOL;
+                        result.boolValue = Convert.ToBoolean((jt as JValue).Value);
                         break;
                     default:
                         result.type = JsonEntryType.STRING;
                         result.stringValue = (jt as JValue).Value.ToString();
                         break;
                 }
-            }
-            catch (Exception e)
-            {
+            //}
+            //catch (Exception e)
+            //{
 
-            }
+            //}
 
             return result;
         }
@@ -78,12 +83,13 @@ namespace ApiTestExtension2.DataStructure.Json
     public enum JsonEntryType
     {
         DEFAULT,
-        LIST_ENTRY,
+        LIST,
         LIST_NULL,
-        DICT_NULL,
         DICT,
+        DICT_NULL,
         STRING,
         INT,
-        NULL
+        NULL,
+        BOOL
     }
 }

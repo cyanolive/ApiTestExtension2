@@ -53,13 +53,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataStructure\Json\JsonEntry.cs" />
+    <Compile Include="DataStructure\Matcher\MatchResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataStructure\Matcher\MatchStructure.cs" />
+    <Compile Include="DataStructure\Utils\Utils.cs" />
+    <Compile Include="DataStructure\XML\ApiItem.cs" />
+    <Compile Include="DataStructure\XML\ProductInXML.cs" />
+    <Compile Include="DataStructure\XML\RequestParam.cs" />
+    <Compile Include="DataStructure\XML\ResponseInXML.cs" />
+    <Compile Include="DataStructure\XML\RequestInXML.cs" />
+    <Compile Include="DataStructure\XML\ResponseParam.cs" />
+    <Compile Include="Dialogs\Coverage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Coverage.Designer.cs">
+      <DependentUpon>Coverage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FiddlerExtension2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\Coverage.resx">
+      <DependentUpon>Coverage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy "$(ProjectDir)$(OutDir)$(TargetFileName)" "D:\Documents\Fiddler2\Scripts\"
